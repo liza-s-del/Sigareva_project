@@ -1,0 +1,7 @@
+git --version - проверить версию Git
+git config --list - посмотреть все настройки
+git init - инициализировать репозиторий
+git status - проверить статус репозитория
+git add <file> - добавить файл в staging area
+git commit -m "message" - создать коммит
+git log - просмотр истории коммитов
