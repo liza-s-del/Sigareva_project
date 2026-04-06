@@ -17,3 +17,16 @@ set_1 = set(contractor_1)
 set_2 = set(contractor_2)
 set_3 = set(contractor_3)
 
+print("РАБОТА С МНОЖЕСТВАМИ")
+print("-" * 40)
+
+#Поиск уникальных материалов
+"""
+Поиск уникальных материалов осуществляется при помощи метода union()
+"""
+all_unique = set_1.union(set_2, set_3)
+print("Уникальные материалы:")
+print()
+print(f"{sorted(all_unique)}")
+print(f"Всего: {len(all_unique)} уникальных материалов")
+print("-" * 40)
