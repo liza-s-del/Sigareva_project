@@ -29,3 +29,16 @@ else:
 #Рассчет скидки и итоговой стоимости
 discount = total * discount_percent / 100
 total_with_discount = total - discount
+
+#Вывод значений
+print()
+print("КАЛЬКУЛЯТОР СКИДКИ")
+print()
+print(f"Цена за единицу: {price:.2f} руб")
+print(f"Количество: {quantity} шт")
+print("-" * 40)
+print(f"Сумма без скидки: {total:.2f} руб")
+print(f"Уровень скидки: {discount_level} ({discount_percent}%)")
+print(f"Сумма скидки: {discount:.2f} руб")
+print("-" * 40)
+print(f"Итоговая стоимость:{total_with_discount:.2f} руб")
