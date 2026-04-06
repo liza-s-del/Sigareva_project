@@ -53,3 +53,25 @@ if only_first:
     print(f"{sorted(only_first)}")
 else:
     print("Нет уникальных материалов у первого подрядчика")
+
+print("-" * 40)
+
+#Материалы, которые есть ровно у двух подрядчиков
+"""
+Для определения материалов, которые есть ровно у двух подрядчиков,
+считаем, у скольких подрядчиков есть каждый материал
+"""
+exactly_two = set()
+
+for material in all_unique:
+    count = 0
+    if material in set_1:
+        count += 1
+    if material in set_2:
+        count += 1
+    if material in set_3:
+        count += 1
+    if count == 2:
+        exactly_two.add(material)
+
+print(f"Ровно у двух: {sorted(exactly_two)}")
