@@ -33,3 +33,12 @@ print(f"Первый элемент: {materials[0]}")
 print(f"Последний элемент: {materials[-1]}")
 print(f"Средний(е) элемент(ы): {get_middle_element(materials)}")
 print("-" * 40)
+
+#Добавление 2-х новых материалов
+print("Добавление новых материалов:")
+print()
+materials.append("Стекло")
+print(f"Добавлено 'Стекло' -> {materials}")
+materials.append("Резина")
+print(f"Добавлена 'Резина' -> {materials}")
+print("-" * 40)
