@@ -50,3 +50,7 @@ deleted_material = materials.pop(1)
 print(f"Удален элемент: '{deleted_material}'")
 print(f"Список после удаления: {materials}")
 print("-" * 40)
+
+#Вывод итогового списка и длины
+print(f"Итоговый список: {materials}")
+print(f"Количество элементов: {len(materials)}")
