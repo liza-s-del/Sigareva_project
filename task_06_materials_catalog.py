@@ -42,3 +42,11 @@ print(f"Добавлено 'Стекло' -> {materials}")
 materials.append("Резина")
 print(f"Добавлена 'Резина' -> {materials}")
 print("-" * 40)
+
+#Удаление 2 элемента
+print("Удаление второго элемента:")
+print()
+deleted_material = materials.pop(1)
+print(f"Удален элемент: '{deleted_material}'")
+print(f"Список после удаления: {materials}")
+print("-" * 40)
