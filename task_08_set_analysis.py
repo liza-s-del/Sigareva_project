@@ -30,3 +30,16 @@ print()
 print(f"{sorted(all_unique)}")
 print(f"Всего: {len(all_unique)} уникальных материалов")
 print("-" * 40)
+
+#Поиск общих для всех материалов
+"""
+Поиск общих материалов осуществляется при помощи метода intersection()
+"""
+common_all = set_1.intersection(set_2, set_3)
+print("Материалы, которые есть у всех трёх подрядчиков:")
+if common_all:
+    print(f"{sorted(common_all)}")
+else:
+    print("Нет материалов, общих для всех трёх подрядчиков")
+print("-" * 40)
+
