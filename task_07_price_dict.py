@@ -21,3 +21,15 @@ print(f"Добавленf 'Глина' -> {price_list['Глина']} руб ")
 
 price_list["Резина"] = 2100
 print(f"Добавлена 'Резина' -> {price_list['Резина']} руб")
+print("-" * 40)
+
+#Изменение цены
+"""
+В данном пункте цена бетона увеличивается на 10 процентов
+"""
+print("Изменение цены:")
+old_price = price_list["Бетон"]
+new_price = old_price * 1.10  # увеличиваем на 10%
+price_list["Бетон"] = new_price
+print(f"Бетон: {old_price} руб -> {int(new_price)} руб")
+print("-" * 40)
