@@ -79,3 +79,19 @@ if critical_materials:
         print(f"- {material}: {qty} < {min_qty}")
 else:
     print("Нет материалов с критическим остатком")
+
+#Моделирование выдачи со склада
+material_to_issue = "Цемент"
+issue_quantity = 25
+
+if material_to_issue in warehouse:
+    current_qty = warehouse[material_to_issue]["quantity"]
+    if current_qty >= issue_quantity:
+        warehouse[material_to_issue]["quantity"] -= issue_quantity
+        new_qty = warehouse[material_to_issue]["quantity"]
+        print(f"Выдано {issue_quantity} единиц '{material_to_issue}'")
+        print(f"Остаток: {current_qty} → {new_qty}")
+    else:
+        print(f"Ошибка: недостаточно. Доступно: {current_qty}")
+else:
+    print(f"Ошибка: материал '{material_to_issue}' не найден")
