@@ -25,3 +25,7 @@ elif total <= 5000:
 else:
     discount_percent = 10
     discount_level = "более 5000₽"
+
+#Рассчет скидки и итоговой стоимости
+discount = total * discount_percent / 100
+total_with_discount = total - discount
