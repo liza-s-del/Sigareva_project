@@ -33,3 +33,9 @@ new_price = old_price * 1.10  # увеличиваем на 10%
 price_list["Бетон"] = new_price
 print(f"Бетон: {old_price} руб -> {int(new_price)} руб")
 print("-" * 40)
+
+#Удаление материала
+print("Удаление материала:")
+deleted = price_list.pop("Пластик")
+print(f"Удален 'Пластик' стоимостью {deleted} руб")
+print("-" * 40)
