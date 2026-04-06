@@ -70,3 +70,12 @@ def find_most_expensive(warehouse_dict):
 most_expensive_name, max_cost = find_most_expensive(warehouse)
 
 print(f"Самый дорогой материал: {most_expensive_name} ({max_cost:.2f} руб)")
+
+#Список критических остатков
+print(f"КРИТИЧЕСКИЕ ОСТАТКИ ({len(critical_materials)}):")
+
+if critical_materials:
+    for material, qty, min_qty in critical_materials:
+        print(f"- {material}: {qty} < {min_qty}")
+else:
+    print("Нет материалов с критическим остатком")
