@@ -8,3 +8,20 @@ quantity = 30 #количество товара
 
 #Цена без скидки
 total = price * quantity
+
+#Рассчет скидки
+"""
+Система скидок:
+< 1000₽ → 0%
+1000-5000₽ → 5%
+> 5000₽ → 10%
+"""
+if total < 1000:
+    discount_percent = 0
+    discount_level = "менее 1000₽"
+elif total <= 5000:
+    discount_percent = 5
+    discount_level = "1000-5000₽"
+else:
+    discount_percent = 10
+    discount_level = "более 5000₽"
