@@ -3,23 +3,29 @@
 В задаче рассчитываются геометрические параметры помещения и стоимость покраски стен
 """
 
-"""
-Исходные данные
-:param length: длина помещения, м
-:param width: ширина помещения, м
-:param height: высота помещения, м
-"""
-length = 8.0
-width = 6.0
-height = 2.7
-Per_square_metre_price = 125.0
+#Исходные данные
+length = 8.65 #длина помещения, м
+width = 6.2 #ширина помещения, м
+height = 2.7 #высота помещения, м
+per_square_metre_price = 125.0 #стоимость покраски на 1м2
 
-"""
-Рассчет геометрических параметров
-:param floor_area: площадь пола, м2
-:param wall_area: площадь стен, м2
-:param volume: объем помещения, м3
-"""
-floor_area = length * width
-wall_area = 2 * (length + width) * height
-volume = length * width * height
+#Рассчет геометрических параметров
+floor_area = length * width #площадь пола, м2
+wall_area = 2 * (length + width) * height #площадь стен, м2
+volume = length * width * height #объем помещения, м3
+
+#Рассчет стоимости покраски стен, руб
+painting_cost = wall_area * per_square_metre_price
+
+#Вывод с округлением до 2-х знаков после запятой
+print()
+print("РАСЧЕТ ПАРАМЕТРОВ ПОМЕЩЕНИЯ")
+print()
+print(f"Длина помещения: {length} м")
+print(f"Ширина помещения: {width} м")
+print(f"Высота помещения: {height} м")
+print()
+print(f"Площадь пола: {floor_area:.2f} м2")
+print(f"Площадь стен: {wall_area:.2f} м2")
+print(f"Объем помещения: {volume:.2f} м3")
+print(f"Стоимость покраски стен: {painting_cost:.2f} руб")
