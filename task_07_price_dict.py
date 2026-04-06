@@ -39,3 +39,8 @@ print("Удаление материала:")
 deleted = price_list.pop("Пластик")
 print(f"Удален 'Пластик' стоимостью {deleted} руб")
 print("-" * 40)
+
+# Средняя цена
+print("Рассчет средней цены:")
+average = sum(price_list.values()) / len(price_list)
+print(f"Средняя цена: {average:.2f} руб")
