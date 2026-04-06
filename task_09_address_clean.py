@@ -36,3 +36,15 @@ def clean_address(address):
         address = address.replace("  ", " ") #убирает двойные пробелы
 
     return address
+
+#Вывод результатов
+print()
+print("ОЧИСТКА АДРЕСОВ")
+print()
+print("\n=== СРАВНЕНИЕ ===\n")
+
+for i, addr in enumerate(addresses, start=1):
+    cleaned = clean_address(addr)
+    print(f"#{i}")
+    print(f"ДО: '{addr}'")
+    print(f"ПОСЛЕ: '{cleaned}'")
