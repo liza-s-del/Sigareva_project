@@ -46,3 +46,27 @@ for material, data in warehouse.items():
     print(f"{material:<12} {quantity:<8} {price:<10.2f} {min_qty:<8} {cost:<12.2f}{critical_mark}")
 print("=" * 70)
 print(f"{'ОБЩАЯ СТОИМОСТЬ:':<40} {total_warehouse_cost:<12.2f} руб")
+
+#Самый дорогой материал
+def find_most_expensive(warehouse_dict):
+    """
+    Находит самый дорогой материал на складе.
+
+    :param warehouse_dict: словарь со складом
+    return: название материала и его стоимость
+    """
+    most_expensive_name = None
+    max_cost = 0
+
+    for material, data in warehouse_dict.items():
+        cost = data["quantity"] * data["price"]
+        if cost > max_cost:
+            max_cost = cost
+            most_expensive_name = material
+
+    return most_expensive_name, max_cost
+
+# Вызов функции
+most_expensive_name, max_cost = find_most_expensive(warehouse)
+
+print(f"Самый дорогой материал: {most_expensive_name} ({max_cost:.2f} руб)")
